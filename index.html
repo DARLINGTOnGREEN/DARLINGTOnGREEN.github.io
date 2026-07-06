@@ -29,7 +29,6 @@
       font-size: 16px;
     }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -67,7 +66,6 @@
 
     .nav-links a:hover { color: var(--ink); }
 
-    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -138,28 +136,11 @@
       cursor: pointer;
     }
 
-    .btn-primary {
-      background: var(--ink);
-      color: #fff;
-    }
+    .btn-primary { background: var(--ink); color: #fff; }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
+    .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--ink); transform: translateY(-1px); }
 
-    .btn-primary:hover {
-      background: var(--accent);
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--ink);
-      border: 1px solid var(--border);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--ink);
-      transform: translateY(-1px);
-    }
-
-    /* SECTION */
     section {
       max-width: 860px;
       margin: 0 auto;
@@ -189,41 +170,12 @@
       margin-bottom: 3rem;
     }
 
-    /* SKILLS */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .skill-tag {
+    .projects-grid {
       display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.75rem 1rem;
-      font-size: 0.875rem;
-      font-weight: 400;
-      transition: border-color 0.2s, transform 0.2s;
+      flex-direction: column;
+      gap: 2rem;
     }
 
-    .skill-tag:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .skill-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
-    /* PROJECT CARD */
     .project-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -237,9 +189,7 @@
       transform: translateY(-3px);
     }
 
-    .project-header {
-      padding: 2rem 2rem 0;
-    }
+    .project-header { padding: 2rem 2rem 0; }
 
     .project-badge {
       display: inline-block;
@@ -291,10 +241,7 @@
       white-space: nowrap;
     }
 
-    .flow-arrow {
-      color: var(--muted);
-      font-size: 0.75rem;
-    }
+    .flow-arrow { color: var(--muted); font-size: 0.75rem; }
 
     .project-details {
       padding: 1.5rem 2rem 2rem;
@@ -312,9 +259,7 @@
       margin-bottom: 0.6rem;
     }
 
-    .detail-group ul {
-      list-style: none;
-    }
+    .detail-group ul { list-style: none; }
 
     .detail-group ul li {
       font-size: 0.9rem;
@@ -340,7 +285,36 @@
       flex-wrap: wrap;
     }
 
-    /* ABOUT */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .skill-tag {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .skill-tag:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    .skill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -348,22 +322,11 @@
       margin-top: 2rem;
     }
 
-    .about-text p {
-      color: var(--muted);
-      margin-bottom: 1rem;
-      font-size: 0.975rem;
-    }
+    .about-text p { color: var(--muted); margin-bottom: 1rem; font-size: 0.975rem; }
 
-    .about-stats {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
+    .about-stats { display: flex; flex-direction: column; gap: 1.25rem; }
 
-    .stat-item {
-      border-left: 2px solid var(--accent);
-      padding-left: 1rem;
-    }
+    .stat-item { border-left: 2px solid var(--accent); padding-left: 1rem; }
 
     .stat-number {
       font-family: 'DM Serif Display', serif;
@@ -372,12 +335,8 @@
       margin-bottom: 0.2rem;
     }
 
-    .stat-label {
-      font-size: 0.825rem;
-      color: var(--muted);
-    }
+    .stat-label { font-size: 0.825rem; color: var(--muted); }
 
-    /* CONTACT */
     .contact-card {
       background: var(--ink);
       color: #fff;
@@ -390,16 +349,8 @@
       flex-wrap: wrap;
     }
 
-    .contact-card h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-card p {
-      color: rgba(255,255,255,0.6);
-      font-size: 0.925rem;
-    }
+    .contact-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .contact-card p { color: rgba(255,255,255,0.6); font-size: 0.925rem; }
 
     .btn-white {
       background: #fff;
@@ -415,7 +366,6 @@
 
     .btn-white:hover { opacity: 0.85; }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 2rem;
@@ -424,13 +374,11 @@
       border-top: 1px solid var(--border);
     }
 
-    /* ANIMATIONS */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* RESPONSIVE */
     @media (max-width: 640px) {
       nav { padding: 1rem 1.25rem; }
       .nav-links { gap: 1.25rem; }
@@ -450,14 +398,13 @@
   <nav>
     <a class="nav-logo" href="#">Darlington Green</a>
     <ul class="nav-links">
-      <li><a href="#project">Project</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- HERO -->
   <div class="hero">
     <span class="hero-label">AI Systems Engineer</span>
     <h1>Building systems that <em>think</em> and act automatically.</h1>
@@ -465,117 +412,155 @@
       I design and deploy AI-powered automation pipelines that connect communication tools, APIs, and project management platforms — so teams can focus on what matters.
     </p>
     <div class="hero-actions">
-      <a href="#project" class="btn btn-primary">View My Work</a>
+      <a href="#projects" class="btn btn-primary">View My Work</a>
       <a href="https://github.com/DARLINGTOnGREEN" target="_blank" class="btn btn-secondary">GitHub →</a>
     </div>
   </div>
 
-  <!-- PROJECT -->
-  <section id="project">
+  <!-- PROJECTS -->
+  <section id="projects">
     <div class="section-label">Projects</div>
     <h2 class="section-title">AI Automation Systems</h2>
     <div class="section-divider"></div>
 
-    <div class="project-card" style="margin-bottom: 2rem;">
-      <div class="project-header">
-        <span class="project-badge">Live & Deployed</span>
-        <h3 class="project-title">Automated Email Intelligence Pipeline</h3>
-        <p class="project-desc">
-          A fully automated system that monitors a Gmail inbox, uses Claude AI to summarize incoming emails, forwards clean summaries to the right person, and automatically creates tasks in Asana — all without any manual input. Deployed live on Railway and running 24/7.
-        </p>
-      </div>
+    <div class="projects-grid">
 
-      <div class="flow-diagram">
-        <div class="flow-step">📧 Gmail Inbox</div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">🤖 Claude AI</div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">📋 Summary Generated</div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">✅ Asana Task Created</div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">📨 Forwarded to Team</div>
-      </div>
-
-      <div class="project-details">
-        <div class="detail-group">
-          <h4>What it does</h4>
-          <ul>
-            <li>Monitors inbox for unread emails every 60 seconds</li>
-            <li>Summarizes email content using Claude API</li>
-            <li>Auto-creates tasks in Asana with AI-generated descriptions</li>
-            <li>Forwards clean summaries to the right recipient</li>
-            <li>Filters untrusted senders for security</li>
-            <li>Runs 24/7 on a live cloud server</li>
-          </ul>
+      <!-- PROJECT 1 -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-badge">Live & Deployed</span>
+          <h3 class="project-title">AI Email Summarizer & Task Generator</h3>
+          <p class="project-desc">A fully automated pipeline that monitors a Gmail inbox, summarizes emails using Claude AI, creates Asana tasks automatically, and forwards clean summaries — all running 24/7 on a live cloud server.</p>
         </div>
-        <div class="detail-group">
-          <h4>Tech Stack</h4>
-          <ul>
-            <li>Python — core automation logic</li>
-            <li>Gmail API — inbox monitoring & sending</li>
-            <li>Anthropic Claude API — AI summarization</li>
-            <li>Asana API — task creation</li>
-            <li>Railway — cloud deployment</li>
-            <li>GitHub — version control & CI/CD</li>
-          </ul>
+        <div class="flow-diagram">
+          <div class="flow-step">📧 Gmail Inbox</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">🤖 Claude AI</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">📋 Summary</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">✅ Asana Task</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">📨 Forwarded</div>
         </div>
-      </div>
-
-      <div class="project-footer">
-        <a href="https://github.com/DARLINGTOnGREEN/email-summarizer" target="_blank" class="btn btn-primary">View on GitHub →</a>
-      </div>
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="project-card">
-      <div class="project-header">
-        <span class="project-badge">Live & Deployed</span>
-        <h3 class="project-title">AI Social Media Content Generator</h3>
-        <p class="project-desc">
-          A no-code AI automation built on Make that generates platform-specific social media content automatically. Send a topic via webhook, Claude drafts optimized posts for X and Instagram, and the content is saved to a Google Sheets content calendar — ready for review and publishing.
-        </p>
-      </div>
-
-      <div class="flow-diagram">
-        <div class="flow-step">💡 Topic Input</div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">⚡ Make Webhook</div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">🤖 Claude AI</div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">🐦 X Post Draft</div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-step">📊 Google Sheets</div>
-      </div>
-
-      <div class="project-details">
-        <div class="detail-group">
-          <h4>What it does</h4>
-          <ul>
-            <li>Accepts any topic via webhook trigger</li>
-            <li>Claude generates optimized X and Instagram posts</li>
-            <li>Saves drafts to a Google Sheets content calendar</li>
-            <li>Includes hashtags, emojis, and platform-specific formatting</li>
-            <li>Team can review and approve before publishing</li>
-            <li>Built entirely with no-code tools on Make</li>
-          </ul>
+        <div class="project-details">
+          <div class="detail-group">
+            <h4>What it does</h4>
+            <ul>
+              <li>Monitors inbox every 60 seconds</li>
+              <li>Summarizes emails using Claude API</li>
+              <li>Auto-creates tasks in Asana</li>
+              <li>Forwards summaries to recipient</li>
+              <li>Filters untrusted senders</li>
+              <li>Runs 24/7 on Railway cloud</li>
+            </ul>
+          </div>
+          <div class="detail-group">
+            <h4>Tech Stack</h4>
+            <ul>
+              <li>Python</li>
+              <li>Gmail API (OAuth2)</li>
+              <li>Anthropic Claude API</li>
+              <li>Asana REST API</li>
+              <li>Railway (cloud deployment)</li>
+              <li>GitHub</li>
+            </ul>
+          </div>
         </div>
-        <div class="detail-group">
-          <h4>Tech Stack</h4>
-          <ul>
-            <li>Make — workflow automation platform</li>
-            <li>Anthropic Claude API — AI content generation</li>
-            <li>Webhooks — trigger mechanism</li>
-            <li>Google Sheets API — content calendar storage</li>
-            <li>Custom prompt engineering — platform optimization</li>
-          </ul>
+        <div class="project-footer">
+          <a href="https://github.com/DARLINGTOnGREEN/email-summarizer" target="_blank" class="btn btn-primary">View on GitHub →</a>
         </div>
       </div>
 
-      <div class="project-footer">
-        <a href="https://github.com/DARLINGTOnGREEN" target="_blank" class="btn btn-primary">View GitHub →</a>
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-badge">Live & Deployed</span>
+          <h3 class="project-title">AI Social Media Content Generator</h3>
+          <p class="project-desc">A no-code AI automation built on Make that generates platform-specific social media content automatically. Send a topic via webhook, Claude drafts posts for X and Instagram, saved to a Google Sheets content calendar.</p>
+        </div>
+        <div class="flow-diagram">
+          <div class="flow-step">💡 Topic Input</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">⚡ Make Webhook</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">🤖 Claude AI</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">🐦 X & Instagram</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">📊 Google Sheets</div>
+        </div>
+        <div class="project-details">
+          <div class="detail-group">
+            <h4>What it does</h4>
+            <ul>
+              <li>Accepts any topic via webhook</li>
+              <li>Claude generates X and Instagram posts</li>
+              <li>Includes hashtags and emojis</li>
+              <li>Saves to Google Sheets calendar</li>
+              <li>Team reviews before publishing</li>
+              <li>Built entirely on Make</li>
+            </ul>
+          </div>
+          <div class="detail-group">
+            <h4>Tech Stack</h4>
+            <ul>
+              <li>Make (automation platform)</li>
+              <li>Anthropic Claude API</li>
+              <li>Webhooks</li>
+              <li>Google Sheets API</li>
+              <li>Custom prompt engineering</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/DARLINGTOnGREEN" target="_blank" class="btn btn-primary">View GitHub →</a>
+        </div>
       </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-badge">Live & Running</span>
+          <h3 class="project-title">AI-Powered Telegram Bot</h3>
+          <p class="project-desc">A Telegram bot powered by Claude AI that responds intelligently to any user message in real time. Built with Python and the Telegram Bot API, it handles commands and free-text conversations using Claude as the AI brain.</p>
+        </div>
+        <div class="flow-diagram">
+          <div class="flow-step">💬 User Message</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">📱 Telegram API</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">🤖 Claude AI</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-step">💬 AI Response</div>
+        </div>
+        <div class="project-details">
+          <div class="detail-group">
+            <h4>What it does</h4>
+            <ul>
+              <li>Receives messages via Telegram</li>
+              <li>Processes through Claude AI</li>
+              <li>Responds intelligently in real time</li>
+              <li>Handles /start and /help commands</li>
+              <li>Shows typing indicator while processing</li>
+              <li>Works with any free-text message</li>
+            </ul>
+          </div>
+          <div class="detail-group">
+            <h4>Tech Stack</h4>
+            <ul>
+              <li>Python</li>
+              <li>Telegram Bot API</li>
+              <li>Anthropic Claude API</li>
+              <li>python-telegram-bot library</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/DARLINGTOnGREEN" target="_blank" class="btn btn-primary">View GitHub →</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -584,20 +569,23 @@
     <div class="section-label">Capabilities</div>
     <h2 class="section-title">Tools & Technologies</h2>
     <div class="section-divider"></div>
-
     <div class="skills-grid">
       <div class="skill-tag"><span class="skill-dot"></span>Claude / Anthropic API</div>
       <div class="skill-tag"><span class="skill-dot"></span>OpenAI API</div>
       <div class="skill-tag"><span class="skill-dot"></span>Python</div>
       <div class="skill-tag"><span class="skill-dot"></span>Gmail API</div>
       <div class="skill-tag"><span class="skill-dot"></span>Asana API</div>
-      <div class="skill-tag"><span class="skill-dot"></span>REST APIs & Integrations</div>
+      <div class="skill-tag"><span class="skill-dot"></span>Telegram Bot API</div>
+      <div class="skill-tag"><span class="skill-dot"></span>Make (Automation)</div>
+      <div class="skill-tag"><span class="skill-dot"></span>Zapier & n8n</div>
+      <div class="skill-tag"><span class="skill-dot"></span>Google Sheets API</div>
+      <div class="skill-tag"><span class="skill-dot"></span>REST APIs & Webhooks</div>
       <div class="skill-tag"><span class="skill-dot"></span>Railway (Cloud Deploy)</div>
       <div class="skill-tag"><span class="skill-dot"></span>GitHub & Git</div>
+      <div class="skill-tag"><span class="skill-dot"></span>Claude Code</div>
       <div class="skill-tag"><span class="skill-dot"></span>HTML / CSS / JavaScript</div>
       <div class="skill-tag"><span class="skill-dot"></span>IT Support & Troubleshooting</div>
-      <div class="skill-tag"><span class="skill-dot"></span>Make (Automation)</div>
-      <div class="skill-tag"><span class="skill-dot"></span>Google Sheets API</div>
+      <div class="skill-tag"><span class="skill-dot"></span>Workflow Automation</div>
     </div>
   </section>
 
@@ -606,26 +594,19 @@
     <div class="section-label">Background</div>
     <h2 class="section-title">About Me</h2>
     <div class="section-divider"></div>
-
     <div class="about-grid">
       <div class="about-text">
-        <p>
-          I'm an AI Systems Engineer based in Nigeria, focused on building practical automation pipelines that connect AI tools with real business workflows.
-        </p>
-        <p>
-          My background in Electrical/Electronic Engineering gives me a strong foundation in systems thinking — I approach every automation problem by understanding the full flow before writing a single line of code.
-        </p>
-        <p>
-          I've worked hands-on with the Claude and OpenAI APIs, built integrations with Gmail and Asana, and deployed production systems on cloud infrastructure. I'm available during U.S. business hours (EST).
-        </p>
+        <p>I'm a B.Tech Electrical/Electronic Engineering graduate from Rivers State University, Nigeria — now applying that engineering mindset to AI automation and intelligent systems.</p>
+        <p>I build practical AI-powered pipelines that connect communication tools, APIs, and project management platforms. Every system I build is deployed to production and solves a real problem.</p>
+        <p>I work autonomously, move fast, and I'm comfortable fixing real production issues. Available during U.S. business hours (EST).</p>
       </div>
       <div class="about-stats">
         <div class="stat-item">
-          <div class="stat-number">2</div>
+          <div class="stat-number">3</div>
           <div class="stat-label">Live AI automations deployed in production</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">5+</div>
+          <div class="stat-number">6+</div>
           <div class="stat-label">APIs integrated across projects</div>
         </div>
         <div class="stat-item">
